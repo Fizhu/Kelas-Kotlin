@@ -1,14 +1,21 @@
-val phi = 3.14
 
 fun main() {
-    println("Luas Lingkaran : ${luasLingkaran(5.0)}")
-    println("Volume Lingkaran : ${volumeLingkaran(5.0)}")
+    val mobil = Mobil(4,"Merah","VW")
+    val mobil2 = Mobil(
+        jumlahBan = 4,
+        warna = "Biru",
+        merek = "Daihatsu"
+    )
+    print(mobil.merek)
+    mobil.hitung()
 }
 
-fun luasLingkaran(jariJari: Double): Double {
-    return 4*phi*(jariJari*jariJari)
-}
-
-fun volumeLingkaran(jariJari: Double): Double {
-    return 4/3*phi*(jariJari*jariJari*jariJari)
+data class Mobil(
+    val jumlahBan: Int,
+    val warna: String,
+    val merek: String
+) {
+    fun hitung() {
+        print("HITUNG")
+    }
 }
